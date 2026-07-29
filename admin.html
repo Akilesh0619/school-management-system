@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin · Meridian School Management</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%231D4B3E'/%3E%3Cpath d='M12 6.5 19 10 12 13.5 5 10z' fill='none' stroke='%23B4842A' stroke-width='1.4' stroke-linejoin='round'/%3E%3Cpath d='M8 11.5v3.3c0 1.1 1.8 2 4 2s4-.9 4-2v-3.3' fill='none' stroke='%23B4842A' stroke-width='1.4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="mark"><span data-icon="graduation" data-icon-class="icon-lg"></span></div>
+      <div class="name">Meridian<small>School Management</small></div>
+    </div>
+    <nav class="sidebar-nav" id="sidebarNav"></nav>
+    <div class="sidebar-foot" id="sidebarFoot"></div>
+  </aside>
+  <div class="sidebar-scrim"></div>
+
+  <div class="main">
+    <header class="topbar">
+      <div class="flex items-center gap-2">
+        <button type="button" class="btn btn-icon btn-ghost menu-toggle"><span data-icon="menu"></span></button>
+        <div>
+          <p class="topbar-title" id="topbarTitle">Dashboard</p>
+          <p class="topbar-sub" id="topbarSub">Overview of school-wide activity</p>
+        </div>
+      </div>
+      <div class="topbar-actions">
+        <button type="button" class="btn btn-icon btn-ghost" id="themeToggle"><span id="themeIcon" data-icon="moon"></span></button>
+        <button type="button" class="btn btn-icon btn-ghost" id="logoutBtn" title="Log out"><span data-icon="logout"></span></button>
+        <div id="topbarAvatar"></div>
+      </div>
+    </header>
+
+    <main class="content">
+      <section class="view" data-view="dashboard"></section>
+      <section class="view" data-view="students"></section>
+      <section class="view" data-view="teachers"></section>
+      <section class="view" data-view="parents"></section>
+      <section class="view" data-view="academics"></section>
+      <section class="view" data-view="attendance"></section>
+      <section class="view" data-view="marks"></section>
+      <section class="view" data-view="timetable"></section>
+      <section class="view" data-view="fees"></section>
+      <section class="view" data-view="notices"></section>
+      <section class="view" data-view="reports"></section>
+      <section class="view" data-view="profile"></section>
+      <section class="view" data-view="password"></section>
+    </main>
+  </div>
+</div>
+
+<script src="js/core/icons.js"></script>
+<script src="js/core/db.js"></script>
+<script src="js/core/auth.js"></script>
+<script src="js/core/ui.js"></script>
+<script src="js/core/shell.js"></script>
+<script src="js/pages/account.js"></script>
+<script src="js/pages/admin-dashboard.js"></script>
+<script src="js/pages/admin-students.js"></script>
+<script src="js/pages/admin-teachers.js"></script>
+<script src="js/pages/admin-parents.js"></script>
+<script src="js/pages/admin-academics.js"></script>
+<script src="js/pages/admin-attendance.js"></script>
+<script src="js/pages/admin-marks.js"></script>
+<script src="js/pages/admin-timetable.js"></script>
+<script src="js/pages/admin-fees.js"></script>
+<script src="js/pages/admin-notices.js"></script>
+<script src="js/pages/admin-reports.js"></script>
+<script src="js/pages/admin.js"></script>
+</body>
+</html>

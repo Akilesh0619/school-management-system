@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign in · Meridian School Management</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%231D4B3E'/%3E%3Cpath d='M12 6.5 19 10 12 13.5 5 10z' fill='none' stroke='%23B4842A' stroke-width='1.4' stroke-linejoin='round'/%3E%3Cpath d='M8 11.5v3.3c0 1.1 1.8 2 4 2s4-.9 4-2v-3.3' fill='none' stroke='%23B4842A' stroke-width='1.4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="auth-shell">
+  <div class="auth-visual">
+    <div class="rule-lines"></div>
+    <div class="seal">
+      <div class="stamp">
+        <div class="grade">A+</div>
+        <div class="label">Est. Records</div>
+      </div>
+    </div>
+    <div class="content-block">
+      <h1>Every student's<br>record, in one place.</h1>
+      <p>Meridian brings admissions, attendance, marks, fees and timetables together for admins, teachers, students and parents &mdash; one clean dashboard per role.</p>
+      <div class="auth-stats">
+        <div><strong>4</strong><span>user roles</span></div>
+        <div><strong>12</strong><span>modules</span></div>
+        <div><strong>100%</strong><span>in your browser</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="auth-form-wrap">
+    <div class="auth-card">
+      <div class="brand-row">
+        <div class="mark"><span data-icon="graduation" data-icon-class="icon-lg"></span></div>
+        <div>
+          <div style="font-family:var(--font-display); font-weight:600; font-size:1.05rem; line-height:1.2;">Meridian</div>
+          <div class="text-xs text-soft">School Management System</div>
+        </div>
+      </div>
+
+      <h2 style="font-size:1.4rem; margin-bottom:.25rem;">Welcome back</h2>
+      <p class="text-sm text-soft" style="margin-bottom:1.4rem;">Sign in to reach your dashboard.</p>
+
+      <div id="formAlert"></div>
+
+      <form id="loginForm">
+        <div class="field">
+          <label for="username">Username or email</label>
+          <input class="input" id="username" name="username" type="text" placeholder="e.g. admin" autocomplete="username" required autofocus>
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input class="input" id="password" name="password" type="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" autocomplete="current-password" required>
+        </div>
+        <div class="flex justify-between items-center mb-2" style="margin-top:-.3rem;">
+          <label class="checkbox-row">
+            <input type="checkbox" id="remember"> <span class="text-sm">Remember me</span>
+          </label>
+          <a href="#" class="text-sm" id="forgotLink">Forgot password?</a>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Sign in <span data-icon="arrowRight" data-icon-class="icon-sm"></span></button>
+      </form>
+
+      <div class="divider-dashed"></div>
+      <p class="text-xs text-soft mb-1">Demo accounts &mdash; tap to autofill</p>
+      <div class="demo-creds">
+        <button type="button" class="demo-chip" data-user="admin" data-pass="admin123"><span data-icon="idCard" data-icon-class="icon-sm"></span> admin / admin123</button>
+        <button type="button" class="demo-chip" data-user="teacher1" data-pass="teacher123"><span data-icon="idCard" data-icon-class="icon-sm"></span> teacher1 / teacher123</button>
+        <button type="button" class="demo-chip" data-user="student1" data-pass="student123"><span data-icon="idCard" data-icon-class="icon-sm"></span> student1 / student123</button>
+        <button type="button" class="demo-chip" data-user="parent1" data-pass="parent123"><span data-icon="idCard" data-icon-class="icon-sm"></span> parent1 / parent123</button>
+      </div>
+      <p class="text-xs text-soft mt-2">All data lives only in this browser (localStorage) &mdash; nothing is sent anywhere. <a href="#" id="resetDataLink">Reset demo data</a></p>
+    </div>
+  </div>
+</div>
+
+<script src="js/core/icons.js"></script>
+<script src="js/core/db.js"></script>
+<script src="js/core/auth.js"></script>
+<script src="js/core/ui.js"></script>
+<script src="js/pages/login.js"></script>
+</body>
+</html>
